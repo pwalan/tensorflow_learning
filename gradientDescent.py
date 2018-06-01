@@ -3,6 +3,10 @@ import math
 
 
 def get_min_x_square():
+    """
+    梯度下降法求y=x^2的极小值和极小值点
+    :return:
+    """
     x = tf.placeholder(tf.float32)
     x0 = tf.Variable([.3], dtype=tf.float32)
 
@@ -23,6 +27,10 @@ def get_min_x_square():
 
 
 def get_min_x_vector():
+    """
+    梯度下降法求(x,x,2x)到(1,2,3)的最小距离的x
+    :return:
+    """
     x = tf.placeholder(tf.float32)
     x0 = tf.Variable([.3], dtype=tf.float32)
 
