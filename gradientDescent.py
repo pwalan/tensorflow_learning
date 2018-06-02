@@ -12,8 +12,7 @@ def get_min_x_square():
 
     loss = x0 ** 2 - x ** 2
 
-    optimizer = tf.train.GradientDescentOptimizer(0.01)
-    train = optimizer.minimize(loss)
+    train = tf.train.AdamOptimizer(0.01).minimize(loss)
 
     x_train = [-2, -1, 0, 1, 2, 3, 4]
     with tf.Session() as sess:
@@ -36,8 +35,7 @@ def get_min_x_vector():
 
     loss = tf.sqrt((x0 - 1) ** 2 + (x0 - 2) ** 2 + (x0 - 3) ** 2) - tf.sqrt((x - 1) ** 2 + (x - 2) ** 2 + (x - 3) ** 2)
 
-    optimizer = tf.train.GradientDescentOptimizer(0.01)
-    train = optimizer.minimize(loss)
+    train = tf.train.AdamOptimizer(0.01).minimize(loss)
 
     x_train = [-2, -1, 0, 1, 2, 3, 4]
     with tf.Session() as sess:
