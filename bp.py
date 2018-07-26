@@ -57,7 +57,7 @@ h1 = addLayer(x, input_num, hid_num1)
 y = addLayer(h1, hid_num1, output_num)
 
 # 定义损失函数及反向传播方法。
-# 均方误差MSE损失函数
+# 均方误差损失函数
 loss_mse = tf.reduce_mean(tf.square(y - y_))
 # 优化算法训练参数
 train_step = tf.train.FtrlOptimizer(0.1).minimize(loss_mse)
